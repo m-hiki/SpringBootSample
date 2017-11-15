@@ -1,0 +1,49 @@
+
+server:
+  port: 8081
+#  contextPath: /sample/
+  session:
+    timeout: 10800
+
+spring:
+  profiles:
+    active: dev
+  main:
+    banner-mode: "off"
+  application:
+    name: sample-front
+
+#  http:
+#    encoding:
+#      charset=UTF-8
+
+
+#server.tomcat:
+#  accesslog:
+#    directory: logs
+#    enabled: true
+#server.tomcat.accesslog.pattern=common # Format pattern for access logs.
+#      prefix=server
+#tomcat:
+#    max-http-header-size: 8192
+#    max-threads: 1500
+
+logging:
+  file: logs/sample_front.log
+  level:
+    org.springframework.web: ERROR
+    org.springframework.jdbc.core.JdbcTemplate: TRACE
+    front: ERROR
+
+mybatis:
+  mapperLocations: classpath*:front/repository/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 1000
+    default-statement-timeout: 30
+
+
+
+
+#endpoints:
+#  enabled=false

@@ -1,0 +1,33 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Eclipse
+.project
+.classpath
+.settings
+.metadata
+
+# OS
+Thumbs.db
+.DS_Store
+
+# gradle
+.gradle
+!gradle-wrapper.jar
+
+# Build
+out
+build
+bin
+
+# Maven
+target
+
+# Other
+*.log
+*.swp
+*.bak
+.factorypath

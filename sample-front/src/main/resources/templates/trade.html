@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trade Page</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+      </tr>
+      <tr th:each="underlier : ${underlierList}">
+        <td th:text="${underlier.underlierCd}"></td>
+        <td th:text="${underlier.underlierName}"></td>
+      </tr>
+    </table>
+  </body>
+</html>
